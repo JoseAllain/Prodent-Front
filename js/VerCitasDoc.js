@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function cargarCitasPendientes() {
-    fetch('http://3.129.88.138/pendientes')
+    fetch('https://3.129.88.138/pendientes')
         .then(response => response.json())
         .then(citas => {
             citas.forEach(cita => {
