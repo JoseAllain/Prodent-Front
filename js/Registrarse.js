@@ -30,7 +30,7 @@ function submitRegistrationForm() {
     };
 
     // Aquí debes colocar la URL a la que tu backend está escuchando
-    var url = 'http://localhost:8080/registro';
+    var url = 'http://3.129.88.138/registro';
 
     // Ejemplo de solicitud AJAX utilizando la API Fetch
     fetch(url, {

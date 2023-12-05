@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function cargarHorariosDisponibles() {
-    fetch('http://localhost:8080/disponibles')
+    fetch('http://3.129.88.138/disponibles')
         .then(response => response.json())
         .then(horarios => {
             horarios.forEach(horario => {
@@ -57,7 +57,7 @@ function verificarCitaPaciente() {
     const idPaciente = getUserIdFromLocalStorage();
     console.log('ID del paciente:', idPaciente); // Deberías ver el ID correcto en la consola
     if (idPaciente) {
-        fetch(`http://localhost:8080/tieneCita/${idPaciente}`)
+        fetch(`http://3.129.88.138/tieneCita/${idPaciente}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error en la respuesta del servidor');
@@ -110,7 +110,7 @@ function registerAppointment() {
         idPaciente: idPaciente
     };
 
-    fetch('http://localhost:8080/registrarC', {
+    fetch('http://3.129.88.138/registrarC', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
