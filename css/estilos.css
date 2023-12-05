@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400;600;700&family=Roboto:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegúrate de que el body ocupe al menos toda la altura del viewport */
+    margin: 0;
+}
+
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #000; /* Fondo negro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Espaciado interior del navbar */
+    color: #fff; /* Texto blanco */
+    height: 60px;
+}
+
+/* Estilos para el enlace "Prodent" a la izquierda */
+.navbar-left a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+    font-weight: bold;
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilos para el enlace "Iniciar sesión" a la derecha */
+.navbar-right a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+
+
+/* Estilos para el contenedor de la imagen de fondo */
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Ajusta la altura según tus necesidades */
+}
+
+
+
+/* Estilos para la imagen de fondo */
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    display: block;/*1*/
+}
+
+/* Estilos para el texto superpuesto */
+.text-overlay {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Texto en color blanco */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+.register-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #007BFF; /* Color de fondo azul */
+    color: white;              /* Color de texto blanco */
+    border-radius: 5px;        /* Bordes redondeados */
+    font-weight: bold;         /* Texto en negrita */
+    text-decoration: none;    /* Remueve el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+    margin-top: 25px;
+}
+
+.register-btn:hover {
+    background-color: #0056b3; /* Color de fondo azul oscuro al pasar el mouse */
+}
+
+
+.texto {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    height: 45vh;           /* Altura del viewport completo */
+    width: 100%;             /* Ancho completo */
+
+}
+
+.Bienvenido {
+    text-align: justify;
+    width: 55%;             /* Puedes ajustar según lo necesario */
+    padding: 20px;
+    
+}
+
+.Bienvenido h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007BFF;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0; /* Aumenta el padding para mayor altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh; 
+    margin-top: 60px;
+    flex: auto;
+}
+
+.footer-content {
+    text-align: left; /* Centra el contenido horizontalmente */
+    width: 90%;
+    color: #007BFF;
+  
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: left; /* Centra los íconos horizontalmente */
+    margin-top: 20px; /* Añade espacio entre "Prodent" e íconos */
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+/* REGRISTRARSE */
+
+
+/* INICIO DE SESION */
+
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input[type="email"],
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+    
+}
+
+.input-group p{
+    margin-top: 15px;
+}
+
+
+.login-container button {
+    width: 80%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+

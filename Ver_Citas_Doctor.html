@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodent</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/ver_citas_doctor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+
+<script>
+    /*/ Verificar si UserId está presente en localStorage
+    var userId = localStorage.getItem('userId');
+
+    if (!userId) {
+        alert("Porfavor inicia sesion")
+        // Si no está presente, redirigir a otra página (por ejemplo, página de inicio de sesión)
+        window.location.href = 'iniciarsecion_doc.html';
+    }
+*/
+
+</script>
+
+
+<body onload="showSchedule('Lun-schedule', document.querySelector('.days button:first-child'))">
+    <style>
+        .schedule {
+            display: none;
+        }
+        .days button.active {
+            background-color: #007BFF; 
+            color: white; 
+        }
+    </style>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="Home_Doctor.html">Prodent</a>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html" id="logoutLink">Cerrar Sesión</a>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+        <h2>VER CITAS PENDIENTES</h2>
+        <div class="days">
+            <button onclick="showSchedule('Lun-schedule', this);">LUNES</button>
+            <button onclick="showSchedule('Mar-schedule', this);">MARTES</button>
+            <button onclick="showSchedule('Mie-schedule', this);">MIÉRCOLES</button>
+            <button onclick="showSchedule('Jue-schedule', this);">JUEVES</button>
+            <button onclick="showSchedule('Vie-schedule', this);">VIERNES</button>
+        </div>
+        <div id="Lun-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Paciente</p>
+            </div>
+            
+
+        </div>
+
+        <div id="Mar-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Paciente</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            
+        </div>
+
+
+        <div id="Mie-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Paciente</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+           
+        </div>
+
+
+        <div id="Jue-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Paciente</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            
+        </div>
+
+
+        <div id="Vie-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Paciente</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            
+        </div>
+        
+        <div class="buttons">
+            <a href="Home_Doctor.html">Regresar</a>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Prodent</h2>
+            <div class="social-icons">
+                <a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok-icon"><i class="fab fa-tiktok"></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/VerCitasDoc.js"></script>
+    <script src="./js/CerrarSesion.js"></script>
+    
+</body>
+</html>

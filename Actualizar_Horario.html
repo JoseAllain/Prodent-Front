@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodent</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/actualizar_horario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+
+<script>
+    // Verificar si UserId está presente en localStorage
+    var userId = localStorage.getItem('userId');
+
+    if (!userId) {
+        alert("Porfavor inicia sesion")
+        // Si no está presente, redirigir a otra página (por ejemplo, página de inicio de sesión)
+        window.location.href = 'iniciarsecion_doc.html';
+    }
+
+
+</script>
+
+<body onload="showSchedule('Lun-schedule', document.querySelector('.days button:first-child'))">
+    <style>
+        .schedule {
+            display: none;
+        }
+        .days button.active {
+            background-color: #007BFF; /* Cambia el color de fondo para el botón activo */
+            color: white; /* Color de texto para el botón activo */
+        }
+    </style>
+   <!-- NAVBAR -->
+   <nav class="navbar">
+    <div class="navbar-left">
+        <a href="Home_Doctor.html">Prodent</a>
+    </div>
+    <div class="navbar-right">
+        <a href="index.html" id="logoutLink">Cerrar Sesión</a>
+        <i class="fas fa-user-circle"></i>
+    </div>
+</nav>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+        <h2>ACTUALIZAR HORARIO</h2>
+        <div class="days">
+            <button onclick="showSchedule('Lun-schedule', this);">LUNES</button>
+            <button onclick="showSchedule('Mar-schedule', this);">MARTES</button>
+            <button onclick="showSchedule('Mie-schedule', this);">MIÉRCOLES</button>
+            <button onclick="showSchedule('Jue-schedule', this);">JUEVES</button>
+            <button onclick="showSchedule('Vie-schedule', this);">VIERNES</button>
+        </div>
+        <div id="Lun-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Disponibilidad</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            <div class="time-block">
+                <p>8:00-9:00 AM</p>
+                <input type="checkbox" data-horario-id="1" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>9:00-10:00 AM</p>
+                <input type="checkbox" data-horario-id="2" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>10:00-11:00 AM</p>
+                <input type="checkbox" data-horario-id="3" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>11:00-12:00 PM</p>
+                <input type="checkbox" data-horario-id="4" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>12:00- 13:00 PM</p>
+                <input type="checkbox" data-horario-id="5" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>13:00-14:00 PM</p>
+                <input type="checkbox" data-horario-id="6" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>14:00-15:00 PM</p>
+                <input type="checkbox" data-horario-id="7" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>15:00-16:00 PM</p>
+                <input type="checkbox" data-horario-id="8" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>16:00-17:00 PM</p>
+                <input type="checkbox" data-horario-id="9" class="checkbox" unchecked>
+            </div>
+            
+        </div>
+        <div id="Mar-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Disponibilidad</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            <div class="time-block">
+                <p>8:00-9:00 AM</p>
+                <input type="checkbox" data-horario-id="10" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>9:00-10:00 AM</p>
+                <input type="checkbox" data-horario-id="11" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>10:00-11:00 AM</p>
+                <input type="checkbox" data-horario-id="12" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>11:00-12:00 PM</p>
+                <input type="checkbox" data-horario-id="13" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>12:00- 13:00 PM</p>
+                <input type="checkbox" data-horario-id="14" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>13:00-14:00 PM</p>
+                <input type="checkbox" data-horario-id="15" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>14:00-15:00 PM</p>
+                <input type="checkbox" data-horario-id="16" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>15:00-16:00 PM</p>
+                <input type="checkbox" data-horario-id="17" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>16:00-17:00 PM</p>
+                <input type="checkbox" data-horario-id="18" class="checkbox" unchecked>
+            </div>
+            
+        </div>
+        <div id="Mie-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Disponibilidad</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            <div class="time-block">
+                <p>8:00-9:00 AM</p>
+                <input type="checkbox" data-horario-id="19" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>9:00-10:00 AM</p>
+                <input type="checkbox" data-horario-id="20" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>10:00-11:00 AM</p>
+                <input type="checkbox" data-horario-id="21" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>11:00-12:00 PM</p>
+                <input type="checkbox" data-horario-id="22" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>12:00- 13:00 PM</p>
+                <input type="checkbox" data-horario-id="23" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>13:00-14:00 PM</p>
+                <input type="checkbox" data-horario-id="24" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>14:00-15:00 PM</p>
+                <input type="checkbox" data-horario-id="25" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>15:00-16:00 PM</p>
+                <input type="checkbox" data-horario-id="26" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>16:00-17:00 PM</p>
+                <input type="checkbox" data-horario-id="27" class="checkbox" unchecked>
+            </div>
+            
+        </div>
+        <div id="Jue-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Disponibilidad</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            <div class="time-block">
+                <p>8:00-9:00 AM</p>
+                <input type="checkbox" data-horario-id="28" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>9:00-10:00 AM</p>
+                <input type="checkbox" data-horario-id="29" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>10:00-11:00 AM</p>
+                <input type="checkbox" data-horario-id="30" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>11:00-12:00 PM</p>
+                <input type="checkbox" data-horario-id="31" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>12:00- 13:00 PM</p>
+                <input type="checkbox" data-horario-id="32" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>13:00-14:00 PM</p>
+                <input type="checkbox" data-horario-id="33" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>14:00-15:00 PM</p>
+                <input type="checkbox" data-horario-id="34" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>15:00-16:00 PM</p>
+                <input type="checkbox" data-horario-id="35" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>16:00-17:00 PM</p>
+                <input type="checkbox" data-horario-id="36" class="checkbox" unchecked>
+            </div>
+            
+        </div>
+        <div id="Vie-schedule" class="schedule">
+            <div class="header">
+                <p>Hora</p>
+                <p>Disponibilidad</p>
+            </div>
+            <!-- Puedes agregar más bloques de horario como este -->
+            <div class="time-block">
+                <p>8:00-9:00 AM</p>
+                <input type="checkbox" data-horario-id="37" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>9:00-10:00 AM</p>
+                <input type="checkbox" data-horario-id="38" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>10:00-11:00 AM</p>
+                <input type="checkbox" data-horario-id="39" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>11:00-12:00 PM</p>
+                <input type="checkbox" data-horario-id="40" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>12:00- 13:00 PM</p>
+                <input type="checkbox" data-horario-id="41" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>13:00-14:00 PM</p>
+                <input type="checkbox" data-horario-id="42" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>14:00-15:00 PM</p>
+                <input type="checkbox" data-horario-id="43" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>15:00-16:00 PM</p>
+                <input type="checkbox" data-horario-id="44" class="checkbox" unchecked>
+            </div>
+            <div class="time-block">
+                <p>16:00-17:00 PM</p>
+                <input type="checkbox" data-horario-id="45" class="checkbox" unchecked>
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <a href="Home_Doctor.html">Regresar</a>
+            <!--<button type="submit" onclick="validateAllSchedules()">Actualizar</button>-->
+            <button id="updateButton">Actualizar</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Prodent</h2>
+            <div class="social-icons">
+                <a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tiktok-icon"><i class="fab fa-tiktok"></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/ActualizarHorario.js"></script>
+    <script src="./js/CerrarSesion.js"></script>
+
+    
+    
+    
+</body>
+</html>
